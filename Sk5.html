@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saksham Raj - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Professional Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      background: linear-gradient(to right, #0f172a, #1e293b); 
+      color: white; 
+      font-family: 'Poppins', sans-serif;
+    }
+    .card { 
+      background: rgba(255,255,255,0.05); 
+      border-radius: 1rem; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5); 
+      padding: 1.5rem; 
+    }
+    .gold { color: #facc15; }
+  </style>
+</head>
+<body class="font-sans" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-4 bg-black bg-opacity-40 fixed w-full z-50">
+    <h1 class="text-2xl font-bold gold">Saksham Raj</h1>
+    <ul class="flex space-x-6 text-white">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6" data-aos="fade-up">
+    <h2 class="text-5xl font-extrabold mb-4">I am Saksham Raj</h2>
+    <p class="text-xl max-w-2xl">Aspiring Chartered Accountant | Teacher | Entrepreneur | Dreamer</p>
+    <div class="mt-10 flex space-x-10">
+      <div>
+        <h3 class="text-4xl font-bold gold counter" data-target="2">0</h3>
+        <p>Years Teaching</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold gold counter" data-target="100">0</h3>
+        <p>Students Taught</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold gold counter" data-target="5">0</h3>
+        <p>Projects Done</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="px-8 py-16" data-aos="fade-right">
+    <h2 class="text-4xl font-bold mb-6 gold">About Me</h2>
+    <div class="card">
+      <p>I am Saksham Raj, a self-made learner and aspiring Chartered Accountant with a strong vision to create impact in finance, education, and entrepreneurship.</p><br>
+      <p>Born and raised in a small city where opportunities in commerce were limited, I grew up with very little support, yet developed resilience and self-reliance early in life. At just 15 years old, I began working and walking 8 km daily to support my education and my mother.</p><br>
+      <p>My journey has been shaped not by privileges, but by hardship, persistence, and a burning desire to achieve. From teaching students in my locality to pitching startup ideas to investors, I have always believed in creating value through knowledge and innovation.</p><br>
+      <p>Today, I am not just a student — I am a future CA, teacher, entrepreneur, and dreamer determined to transform challenges into stepping stones toward success.</p>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="px-8 py-16" data-aos="fade-left">
+    <h2 class="text-4xl font-bold mb-6 gold">Achievements & Recognitions</h2>
+    <div class="relative border-l-4 border-yellow-400 ml-6 space-y-8">
+      <div class="ml-6 card" data-aos="zoom-in">
+        <h3 class="text-xl font-semibold">ICAI Certificate of Excellence</h3>
+        <p>Awarded for identifying and reporting mistakes in official CA Foundation books.</p>
+      </div>
+      <div class="ml-6 card" data-aos="zoom-in">
+        <h3 class="text-xl font-semibold">Startup Pitch Recognition</h3>
+        <p>Created a travel planning startup concept with budget optimization, affordable stays, and audio-guided tours.</p>
+      </div>
+      <div class="ml-6 card" data-aos="zoom-in">
+        <h3 class="text-xl font-semibold">Self-Reliance Achievement</h3>
+        <p>Began working from 15 to support personal studies and family without external support.</p>
+      </div>
+      <div class="ml-6 card" data-aos="zoom-in">
+        <h3 class="text-xl font-semibold">Respected Mentor</h3>
+        <p>Built a reputation as a young commerce mentor helping juniors in Accounts and Economics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="px-8 py-16" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6 gold">Skills & Expertise</h2>
+    <div class="card">
+      <canvas id="skillsChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Goals -->
+  <section id="goals" class="px-8 py-16" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6 gold">Goals & Vision</h2>
+    <div class="relative border-l-4 border-yellow-400 ml-6 space-y-8">
+      <div class="ml-6 card" data-aos="flip-up">
+        <h3 class="text-xl font-semibold">Short-Term (2025)</h3>
+        <p>Clear CA Foundation, Build portfolio website.</p>
+      </div>
+      <div class="ml-6 card" data-aos="flip-up">
+        <h3 class="text-xl font-semibold">Mid-Term (3–5 Years)</h3>
+        <p>Complete CA exams, Gain firm experience, Establish CA practice in Jaipur.</p>
+      </div>
+      <div class="ml-6 card" data-aos="flip-up">
+        <h3 class="text-xl font-semibold">Long-Term (10+ Years)</h3>
+        <p>Expand into consulting, launch financial education platform, multiple income streams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-8 py-16" data-aos="fade-in">
+    <h2 class="text-4xl font-bold mb-6 gold">Contact</h2>
+    <div class="card space-y-4">
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> sakshamraj@email.com</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-2 rounded bg-white text-black" required>
+        <input type="email" placeholder="Your Email" class="w-full p-2 rounded bg-white text-black" required>
+        <textarea placeholder="Your Message" class="w-full p-2 rounded bg-white text-black" rows="4" required></textarea>
+        <button type="submit" class="px-4 py-2 bg-yellow-400 text-black rounded">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    AOS.init();
+
+    // Counters
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const speed = 50;
+        if(count < target){
+          counter.innerText = count + 1;
+          setTimeout(updateCount, speed);
+        } else {
+          counter.innerText = target;
+        }
+      }
+      updateCount();
+    });
+
+    // Skills Chart
+    new Chart(document.getElementById('skillsChart'), {
+      type: 'radar',
+      data: {
+        labels: ['Finance', 'Teaching', 'Entrepreneurship', 'Technology', 'Soft Skills'],
+        datasets: [{
+          label: 'Skill Level',
+          data: [85, 90, 75, 70, 80],
+          backgroundColor: 'rgba(250, 204, 21, 0.2)',
+          borderColor: '#facc15',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: { r: { angleLines: { color: '#555' }, grid: { color: '#555' }, pointLabels: { color: 'white' }, ticks: { color: 'white' } } }
+      }
+    });
+  </script>
+</body>
+</html>
